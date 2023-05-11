@@ -24,16 +24,11 @@
     </div>
     <p
         *ngFor="let historia of historias; let i = index"
-        [ngStyle]="{
-            display: 'flex',
-            'justify-content': 'center',
-            'font-size': '15px',
-            backgroundColor:
-                currentSentence == i
-                    ? 'rgb(255, 192, 203)'
-                    : 'rgb(248, 248, 248)'
+        class="sentence rounded-pill p-2 border border-2 border border-dark"
+        [ngClass]="{
+            'sentence--selected': currentSentence == i,
+            'sentence--not-selected': currentSentence != i
         }"
-        class="rounded-pill p-2 border border-2 border border-dark"
     >
         {{ historia.txt }}
     </p>
