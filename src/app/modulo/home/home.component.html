@@ -1,0 +1,14 @@
+<div *ngIf="mostrarEscena">
+    <app-escena [historias]="historias"></app-escena>
+</div>
+
+<div *ngIf="!mostrarEscena" class="container my-5 py-5">
+    <h1>La capsa màgica dels contes</h1>
+    <p>
+        Fes un clic per començar a llegir el conte de l'heroi que va saber
+        escollir bé
+    </p>
+    <button (click)="start()" class="btn btn-outline-success btn-lg">
+        Començar
+    </button>
+</div>
